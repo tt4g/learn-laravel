@@ -8,7 +8,7 @@ services:
       context: ./docker/laravel
       dockerfile: Dockerfile
     volumes:
-      - ./learn-laravel/:/var/www/html
+      - ./learn-laravel:/var/www/html
       - ./docker/laravel/php.ini-production:/usr/local/etc/php/conf.d/php.ini
     networks:
       - learn-laravel-network
