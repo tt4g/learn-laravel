@@ -1,17 +1,15 @@
 # https://hub.docker.com/_/php
-FROM php:8.0.8-fpm-alpine3.13
+FROM php:8.0.8-fpm-buster
 
-RUN apk --update --no-cache add \
-    git
-
-RUN apk --update --no-cache --virtual build-dependencies add \
-    # xdebug dependencies: autoconf, gcc, g++, make
-    autoconf gcc g++ make
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+    # Using git for development.
+    git \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN pecl install xdebug-3.0.4 \
     && docker-php-ext-enable xdebug
-
-RUN apk del build-dependencies
 
 # Composer
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
