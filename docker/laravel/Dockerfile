@@ -1,5 +1,5 @@
 # https://hub.docker.com/_/php
-FROM php:8.0.2-fpm-alpine3.13
+FROM php:8.0.8-fpm-alpine3.13
 
 RUN apk --update --no-cache add \
     git
