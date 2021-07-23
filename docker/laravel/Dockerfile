@@ -7,6 +7,8 @@ RUN apt-get update \
     git \
     # libzip-dev: enable PHP zip extension with `docker-php-ext-install zip` command.
     zip unzip libzip-dev \
+    # For connect MySQL server in Laravel.
+    default-mysql-client \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 

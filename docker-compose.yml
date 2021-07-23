@@ -17,6 +17,8 @@ services:
       memlock:
         soft: -1
         hard: -1
+    depends_on:
+      - learn-laravel-mysql
   learn-laravel-nginx:
     image: learn-laravel-nginx
     container_name: learn-laravel-nginx
@@ -37,6 +39,22 @@ services:
         hard: -1
     depends_on:
       - learn-laravel
+  learn-laravel-mysql:
+    image: learn-laravel-mysql
+    container_name: learn-laravel-mysql
+    build:
+      context: ./docker/mysql
+      dockerfile: Dockerfile
+    volumes:
+      - ./var/mysql:/var/lib/mysql:cached
+      - ./docker/mysql/my.cnf:/etc/my.cnf
+    networks:
+      - learn-laravel-network
+    env_file: ./docker/mysql/.env
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
 
 networks:
   learn-laravel-network:

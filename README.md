@@ -20,3 +20,9 @@ For production:
 ```bash
 $ composer install --no-dev
 ```
+
+### Connect Database
+
+```bash
+$ docker exec learn-laravel-mysql bash -c 'mysql -u $MYSQL_USER -p$MYSQL_PASSWORD $MYSQL_DATABASE'
+```

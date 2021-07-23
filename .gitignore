@@ -182,3 +182,6 @@ tags
 
 # php-cs-fixer
 .php_cs.cache
+
+# Ignore the directory used to persist data of MySQL launched by Docker.
+/var/mysql
