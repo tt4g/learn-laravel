@@ -41,7 +41,9 @@
             }
         },
         "phpcs.standard": "./phpcs.ruleset.xml",
-        "php-cs-fixer.executablePath": "${workspaceFolder}/vendor/bin/php-cs-fixer",
+        "phpcs.composerJsonPath": "${workspaceFolder}/learn-laravel/composer.json",
+        "phpcs.executablePath": "${workspaceFolder}/learn-laravel/vendor/bin/phpcs",
+        "php-cs-fixer.executablePath": "${workspaceFolder}/learn-laravel/vendor/bin/php-cs-fixer",
         "php-cs-fixer.onsave": true,
         "phpunit.php": "php",
         "phpunit.phpunit": "${workspaceFolder}/vendor/bin/phpunit"
