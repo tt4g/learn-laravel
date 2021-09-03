@@ -40,7 +40,7 @@
                 "icon": "terminal-powershell"
             }
         },
-        "phpcs.standard": "./phpcs.ruleset.xml",
+        "phpcs.standard": "./learn-laravel/.phpcs.xml",
         "phpcs.composerJsonPath": "${workspaceFolder}/learn-laravel/composer.json",
         "phpcs.executablePath": "${workspaceFolder}/learn-laravel/vendor/bin/phpcs",
         "php-cs-fixer.executablePath": "${workspaceFolder}/learn-laravel/vendor/bin/php-cs-fixer",
