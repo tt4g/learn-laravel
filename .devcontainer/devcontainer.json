@@ -46,7 +46,7 @@
         "php-cs-fixer.executablePath": "${workspaceFolder}/learn-laravel/vendor/bin/php-cs-fixer",
         "php-cs-fixer.onsave": true,
         "phpunit.php": "php",
-        "phpunit.phpunit": "${workspaceFolder}/vendor/bin/phpunit"
+        "phpunit.phpunit": "${workspaceFolder}/learn-laravel/vendor/bin/phpunit"
     },
     // Add the IDs of extensions you want installed when the container is created.
     "extensions": [
