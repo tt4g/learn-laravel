@@ -40,22 +40,21 @@
                 "icon": "terminal-powershell"
             }
         },
-        "phpcs.standard": "./learn-laravel/.phpcs.xml",
-        "phpcs.composerJsonPath": "${workspaceFolder}/learn-laravel/composer.json",
-        "phpcs.executablePath": "${workspaceFolder}/learn-laravel/vendor/bin/phpcs",
-        "php-cs-fixer.executablePath": "${workspaceFolder}/learn-laravel/vendor/bin/php-cs-fixer",
-        "php-cs-fixer.onsave": true,
+        "[php]": {
+            "editor.defaultFormatter": "wongjn.php-sniffer"
+        },
+        "phpSniffer.executablesFolder": "./learn-laravel/vendor/bin",
+        "phpSniffer.standard": "./learn-laravel/.phpcs.xml",
         "phpunit.php": "php",
         "phpunit.phpunit": "${workspaceFolder}/learn-laravel/vendor/bin/phpunit"
     },
     // Add the IDs of extensions you want installed when the container is created.
     "extensions": [
-        "junstyle.php-cs-fixer",
         "neilbrayfield.php-docblocker",
-        "ikappas.phpcs",
         "emallin.phpunit",
         "felixfbecker.php-debug",
-        "bmewburn.vscode-intelephense-client"
+        "bmewburn.vscode-intelephense-client",
+        "wongjn.php-sniffer"
     ]
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     // "forwardPorts": [],
