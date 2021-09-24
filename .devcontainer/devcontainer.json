@@ -55,8 +55,5 @@
         "felixfbecker.php-debug",
         "bmewburn.vscode-intelephense-client",
         "wongjn.php-sniffer"
-    ],
-    "forwardPorts": [
-        9003 // xdebug
-    ],
+    ]
 }
